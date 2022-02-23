@@ -9,7 +9,7 @@ def validate(card_number):
     for d in even_digits:
         checksum += sum(digits_of(d*2))
     return checksum % 10
-if len(validate(input('Insira o numero: \n'))) == 16:
+if validate(input('Insira o numero: \n')) == 0:
     print('Valido')
 else:
     print('Invalido')
